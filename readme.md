@@ -15,7 +15,3 @@
 * $log
 * Custom service
 
-####Tag v4 - Routing
-* 
-* 
-* 
