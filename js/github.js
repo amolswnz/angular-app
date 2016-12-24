@@ -8,8 +8,8 @@
                 });
         };
 
-        var getRepos = function(user) {
-            return $http.get(user.repos_url)
+        var getRepos = function(reposUrl) {
+            return $http.get(reposUrl)
                 .then(function(response) {
                     return response.data;
                 });

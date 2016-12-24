@@ -13,7 +13,6 @@
         };
 
         var onRepos = function(data) {
-            console.log(data);
             $scope.repos = data;
         }
 
