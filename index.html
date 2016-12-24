@@ -4,31 +4,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AngularJS</title>
+    <title>GitHub Profile Viewer</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body ng-app="mainApp">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>AngularJS - GitHub Viewer</h1>
+                <h1>AngularJS - GitHub Profile Viewer</h1>
             </div>
         </div>
         <hr>
         <div class="row" ng-controller="MainController">
-            <div class="col-md-12"> 
-                <div class="alert alert-danger" >
+            <div class="col-md-12">
+                <form name="searchForm" class="form-inline" role="form">
+                    <div class="form-group">
+                        <label class="sr-only" for="">label</label>
+                        <input type="text" class="form-control" placeholder="GitHub Username" ng-model="userName"> 
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="searchUser(userName)">Submit</button>
+                </form>
+                <div class="alert alert-danger" ng-hide="!error">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <strong>ERROR</strong> {{ error }}
                 </div>
-                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                    <img ng-src="{{user.avatar_url}}" class="img-responsive img-thumbnail" title="{{user.name}}">                
-                </div>
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                    <h1>Name: {{user.name}}</h1>  
-                    <h2>Location: {{user.location}}</h2>
-                    <h3>Repos: {{user.public_repos}}</h3>
-                </div>
+                <div ng-include="'userDetails.html'" ng-show="user"></div>
             </div>
         <hr>
     </div>
