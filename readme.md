@@ -17,9 +17,3 @@
 
 ####Tag v4 - Routing
 * ngRoute
-
-
-
-https://api.github.com/repos/angular/a/contributors
-avatar_url
-html_url
