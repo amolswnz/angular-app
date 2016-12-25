@@ -1,4 +1,8 @@
-<div style="margin: 20px 0"></div>
+<div class="alert alert-danger" ng-hide="!error">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>ERROR</strong> {{ error }}
+</div>
+<a href="#/main" class="btn btn-primary">Back to search</a>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         <img ng-src="{{user.avatar_url}}" class="img-responsive img-thumbnail" title="{{user.name}}">                
