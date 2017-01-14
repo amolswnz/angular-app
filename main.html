@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-12">
+        Waiting for input {{ countdown }} seconds
+        <form name="searchForm" class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="">label</label>
+                <input type="text" class="form-control" placeholder="GitHub Username" ng-model="userName">
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="searchUser(userName)">Submit</button>
+        </form>
+    </div>
+</div>
